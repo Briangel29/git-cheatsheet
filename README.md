@@ -2,17 +2,17 @@
 
 This repository will containt all of [Git commands](https://git-scm.com/cheat-sheet) as a cheat sheet.
 
-## Diference between working directory, staging area and repository
+## Working directory, staging area and repository
 
-| Concept           | Meaning                                                                | Example            |
-| ----------------- | ---------------------------------------------------------------------- | ------------------ |
-| Working Directory | The place where you edit your files                                    | You edit README.md |
-| Staging Area      | A middle space where you prepare the files before make a commit        | git add .          |
-| Repository        | Commit history which containts version of your proyect in each commits | git commit         |
+| Concept           | Meaning                                                                | Example        |
+| ----------------- | ---------------------------------------------------------------------- | -------------- |
+| Working Directory | The place where you edit your files                                    | edit README.md |
+| Staging Area      | A middle space where you prepare the files before make a commit        | git add .      |
+| Repository        | Commit history which containts version of your proyect in each commits | git commit     |
 
 ## Cheat Sheet
 
-The dangerous command will be present with that _format_ and the obsolet command with that ~~format~~
+Note: The dangerous command will be present with that _format_ and the obsolet command with that ~~format~~.
 
 ### Initial
 
@@ -27,7 +27,7 @@ Git configuration only affects actual repository. Ideal when you want to show ot
 
 **file path**: <your repository>/.git/config
 
-- `git config --local --list` shows a list of local configurations.
+- `git config --local --list` displys a list of local configurations.
 - `git config --local user.name 'joe.doe'` adds a user name.
 - `git config --local user.email 'joe.doe@gmail.com'` adds a user email.
 - `git config --local core.editor 'code --wait'` adds a default editor path. In that case visual studio code shortcut.
@@ -37,9 +37,10 @@ Git configuration only affects actual repository. Ideal when you want to show ot
 Git configuration affects all repositories in the user session. Ideal when you dont want to show the same information in all repositories.
 
 **Linux file path**: /home/user/.gitconfig
+
 **Windows file path**: C:Users/<your user>/.gitconfig
 
-- `git config --global --list` shows a list of global configurations.
+- `git config --global --list` displays a list of global configurations.
 - `git config --global user.name 'joe.doe'` adds a user name.
 - `git config --global user.email 'joe.doe@gmail.com'` adds a user email.
 - `git config --global core.editor 'code --wait'` adds a default editor path. In that case visual studio code shortcut.
@@ -49,9 +50,10 @@ Git configuration affects all repositories in the user session. Ideal when you d
 Git configuration affects all repositories in all user session.
 
 **Linux file path**: /etc/gitconfig
+
 **Windows file path**: C:/ProgramData/Git/config
 
-- `git config --system --list` shows a list of global configurations.
+- `git config --system --list` displays a list of global configurations.
 - `git config --system user.name 'joe.doe'` adds a user name.
 - `git config --system user.email 'joe.doe@gmail.com'` adds a user email.
 - `git config --system core.editor 'code --wait'` adds a default editor path. In that case visual studio code shortcut.
@@ -74,7 +76,7 @@ Git configuration affects all repositories in all user session.
 
 #### Log
 
-- `git log` displays the details commit history
+- `git log` displays the details commit history.
 - `git log -n 3` displays n details commits.
 - `git log --oneline` displays each commits as a single-line view.
 - `git log --graph` displays a graphic relation of each commits.
@@ -87,19 +89,19 @@ Git configuration affects all repositories in all user session.
 - `git diff README.md` compares the file in working directory with the file in the last commit.
 - `git diff <commit> -- README.md` compares the file in working directory with the file in a specific commit.
 - `git diff <commit> <commit> -- README.md` compares the file in two specific commits.
-- `git diff <commit> <branch> -- README.md` compares the file in working directory with the file in a specific commit into a specific branch.
+- `git diff <commit> <branch> -- README.md` compares the file in working directory with the file in a specific commit into a current branch with other specific branch.
 
 ##### Staging area
 
 - `git diff --staged README.md` compares the file in staging area with the file in the latest commit.
 - `git diff --staged <commit> -- README.md` compares the file in staging area with the file in a specific commit.
-- `git diff --staged <commit> <branch> -- README.md` compares the file in staging area with the file in a specific commit into a specific branch.
+- `git diff --staged <commit> <branch> -- README.md` compares the file in staging area with the file in a specific commit into a current branch with other specific branch.
 
 ### Manage commit
 
-- _`git reset --soft HEAD~1`_ reset the commit history n commits back, preserving the staged changes. **Be careful to use it in a share repository**
-- _`git reset --hard HEAD~1`_ reset the commit history n commits back, without preserving the staged changes. **Be careful to use it in a share repository**
-- `git revert HEAD` revert n commit safety by creating an inverse commit. In that case the current commit. Useful for share repository.
+- _`git reset --soft HEAD~1`_ resets the commit history n commits back, preserving the staged changes. **Be careful to use it in a share repository**.
+- _`git reset --hard HEAD~1`_ resets the commit history n commits back, without preserving the staged changes. **Be careful to use it in a share repository**.
+- `git revert HEAD` reverts n commit safety by creating an inverse commit. In that case the current commit. Useful for share repository.
 
 ### Stash
 
