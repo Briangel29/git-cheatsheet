@@ -23,18 +23,18 @@ Note: The dangerous command will be present with that _format_ and the obsolete 
 
 #### Local
 
-Git configuration only affects current repository. Ideal when you want to show other information than the global configuration.
+Git configuration only affects the current repository. Ideal when you want to use other information than the global configuration.
 
 **file path**: <your repository>/.git/config
 
-- `git config --local --list` displys a list of local configurations.
+- `git config --local --list` displays a list of local configurations.
 - `git config --local user.name 'joe.doe'` adds a user name.
 - `git config --local user.email 'joe.doe@gmail.com'` adds a user email.
 - `git config --local core.editor 'code --wait'` adds a default editor path. In that case Visual Studio Code shortcut.
 
 #### Global
 
-Git configuration affects all repositories in the user session. Ideal when you dont want to use the same information in all repositories.
+Git configuration affects all repositories in the user session. Ideal when you don't want to use the same information in all repositories.
 
 **Linux file path**: /home/user/.gitconfig
 
@@ -79,7 +79,7 @@ Git configuration affects all repositories in all user sessions.
 - `git log` displays the detailed commit history.
 - `git log -n 3` displays n details commits.
 - `git log --oneline` displays each commit as a single-line view.
-- `git log --graph` displays a graphic relation of each commits.
+- `git log --graph` displays a graphical relationship of each commits.
 - `git log -n 5 --oneline --graph` displays latest 5 commits as a single-line view with a graphic relation between each one.
 
 #### Diff
@@ -115,7 +115,7 @@ Stash command is usually used for cleaning the directory without losing your cur
 - `git stash push -a -m 'Temporal data'` saves all the files as a temporal copy.
 - `git stash apply` brings back the latest stash whitout deleting it.
 - `git stash apply stash@{0}` brings back a specific stash whitout deleting it.
-- `git stash pop` brings back the latest stash deleting it in a process.
+- `git stash pop` brings back the latest stash deleting it in the process.
 - `git stash pop stash@{0}` brings back a specific stash deleting it in a process.
 
 ### Manage branch
@@ -143,5 +143,5 @@ Cherry-pick command is used to
 ### Configure remote repository
 
 - `git remote add <remote-name> <url-repository>` Links a remote repository with a local repository.
-- `git pull <remote-name> <branch-name>` fetches the remote repository commits to local repository.
+- `git pull <remote-name> <branch-name>` fetches new commits from the remote branch to your local repository (without merging).
 - `git push <remote-name> <branch-name>` Uploads local repository commits to remote repository.
